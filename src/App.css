@@ -1,5 +1,6 @@
 .App {
-  text-align: center;
+  /*text-align: center;*/
+  background-image: url("./pics/web-background.png");
 }
 
 .App-logo {
@@ -14,18 +15,13 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  /*background-color: #282c34;*/
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
 }
 
 @keyframes App-logo-spin {
@@ -36,3 +32,74 @@
     transform: rotate(360deg);
   }
 }
+#header-container{
+  background-image: url("./pics/web-background.png");
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: block;
+  position: fixed;
+}
+#header-container #header {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+}
+#header-title{
+  flex: 0 0 200px;
+  margin: 0 0 0 250px;
+  padding: 3rem;
+  text-align: center;
+  color: #0c0c0c;
+}
+
+.main-nav{
+  flex: 0 0 500px;
+  text-align: center;
+  padding-top: 1rem ;
+}
+
+.main-nav ul{
+  text-align: center;
+  font-weight: bolder;
+  color: black;
+  padding: inherit;
+}
+
+nav li{
+  display: inline;
+  padding-inline: 2em;
+  font-weight: 700;
+  font-size: 1.2rem;
+  font-family: BlinkMacSystemFont, serif;
+  color: black;
+}
+nav a{
+  padding: 8px;
+}
+nav a:hover{
+  background-color: #d4d4da;
+  border-radius: 9999px;
+}
+
+#header-container #header #header-search{
+  flex: 0 1 200px;
+  margin: 0 30px 0 70px;
+  vertical-align: top;
+  text-align: right;
+}
+#header-search .search-ajax {
+  display: inline-block;
+  margin-top: 2.8rem;
+  width: 100%;
+}
+.search-ajax input {
+  padding: 8px 8px;
+  width: 90%;
+  border-radius: 4px;
+  background-color: whitesmoke;
+  color: black;
+  border: none;
+}
+
