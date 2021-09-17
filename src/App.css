@@ -34,11 +34,12 @@
 }
 #header-container{
   background-image: url("./pics/web-background.png");
-  width: 100%;
-  margin: 0;
-  padding: 0;
+  width: 75%;
+  /*height: 100px;*/
+  margin: 0 0 0 200px;
   display: block;
   position: fixed;
+  align-items: flex-start;
 }
 #header-container #header {
   display: -webkit-flex;
@@ -48,35 +49,33 @@
 }
 #header-title{
   flex: 0 0 200px;
-  margin: 0 0 0 250px;
-  padding: 3rem;
+  margin: 0 0 0 100px;
   text-align: center;
   color: #0c0c0c;
+  padding: 2rem 0 0;
 }
 
 .main-nav{
-  flex: 0 0 500px;
-  text-align: center;
-  padding-top: 1rem ;
+  flex: 0 0 auto;
+  margin-top: 14px;
 }
 
 .main-nav ul{
   text-align: center;
   font-weight: bolder;
   color: black;
-  padding: inherit;
 }
 
 nav li{
   display: inline;
-  padding-inline: 2em;
+  padding-inline: 4em;
   font-weight: 700;
   font-size: 1.2rem;
   font-family: BlinkMacSystemFont, serif;
   color: black;
 }
 nav a{
-  padding: 8px;
+  padding: 4px;
 }
 nav a:hover{
   background-color: #d4d4da;
@@ -86,12 +85,11 @@ nav a:hover{
 #header-container #header #header-search{
   flex: 0 1 200px;
   margin: 0 30px 0 70px;
-  vertical-align: top;
   text-align: right;
+  padding: 2rem 0 0;
 }
 #header-search .search-ajax {
   display: inline-block;
-  margin-top: 2.8rem;
   width: 100%;
 }
 .search-ajax input {
@@ -103,3 +101,8 @@ nav a:hover{
   border: none;
 }
 
+#header-hr {
+  background-color: #d0d0d0;
+  width: auto;
+  border: 1px solid #d0d0d0;
+}

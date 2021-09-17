@@ -16,6 +16,9 @@ function App() {
                     <NavigationComponent/>
                     <SearchComponent/>
                 </div>
+                <div>
+                    <hr id="header-hr"/>
+                </div>
             </header>
             <body>
             </body>
