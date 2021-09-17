@@ -9,18 +9,13 @@ function App() {
             <header id="header-container">
                 <div id="header">
                     <div id="header-title">
-                        <span><a>B</a></span>
-                        <span><a>ook.</a></span>
-                        <span><a>LOG</a></span>
+                        <a>Book.LOG</a>
                     </div>
                     <NavigationComponent/>
                     <SearchComponent/>
                 </div>
-                <div>
-                    <hr id="header-hr"/>
-                </div>
             </header>
-            <body>
+            <body id="body-container">
             </body>
             <footer>
             </footer>
