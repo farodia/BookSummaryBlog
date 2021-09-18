@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import SearchComponent from "./components/Search";
 import NavigationComponent from "./components/Navigation";
+import BookSummaryPage from './components/BookSummary';
 
 function App() {
     return (
@@ -15,8 +16,7 @@ function App() {
                     <SearchComponent/>
                 </div>
             </header>
-            <body id="body-container">
-            </body>
+            <BookSummaryPage/>
             <footer>
             </footer>
         </div>
