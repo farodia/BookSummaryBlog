@@ -1,6 +1,7 @@
 import '../App.css';
 import React from "react";
 import EditSvg from "./EditiSvg";
+import TurnToTitleSvg from "./TurnToTitleSvg";
 
 const BookSummaryPage = () => {
     return (
@@ -21,6 +22,7 @@ const BookSummaryPage = () => {
                         </article>
                     </div>
                     <div className="title-navigator">
+                        <TurnToTitleSvg/>
                     </div>
                 </div>
             </div>

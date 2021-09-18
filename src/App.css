@@ -170,7 +170,8 @@ nav a:hover {
 }
 
 .title-navigator {
-    height: 250px;
+    height: 180px;
     width: 120px;
+    padding-top: 70px;
     border: 1px solid red;
 }
