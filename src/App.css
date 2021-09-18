@@ -91,7 +91,6 @@ nav a {
 nav a:hover {
     background-color: #d4d4da;
     border-radius: 9999px;
-
 }
 
 #header-container #header #header-search {
@@ -174,4 +173,11 @@ nav a:hover {
     width: 120px;
     padding-top: 70px;
     border: 1px solid red;
+}
+
+.title-navigator:hover path{
+    fill:black;
+}
+.edit-svg:hover path{
+    fill:black;
 }
