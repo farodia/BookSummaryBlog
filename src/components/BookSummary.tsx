@@ -6,20 +6,17 @@ import TurnToTitleSvg from "./TurnToTitleSvg";
 const BookSummaryPage = () => {
     return (
         <div id="book-box">
-
             <div id="book-container">
-                <div className="edit-column">
-                    <div>
+                <div className="article-content">
+                    <article>
                         <h2 className="article-title">SUMMARY</h2>
-                    </div>
-                    <div className="edit-svg">
-                        <EditSvg/>
-                    </div>
+                    </article>
                 </div>
                 <div className="content-row">
-                    <div className="article-content">
-                        <article>
-                        </article>
+                    <div className="edit-column">
+                        <div className="edit-svg">
+                            <EditSvg/>
+                        </div>
                     </div>
                     <div className="title-navigator">
                         <TurnToTitleSvg/>
