@@ -194,4 +194,8 @@ nav a:hover {
     fill:black;
 }
 
+textarea {
+    vertical-align: text-top;
+}
+
 

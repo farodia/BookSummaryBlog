@@ -1,26 +1,31 @@
-import '../App.css';
-import React from "react";
-import EditSvg from "./EditiSvg";
-import TurnToTitleSvg from "./TurnToTitleSvg";
+import React, {useState} from "react";
+import SummaryContent from "./SummaryContent";
+import EditModal from "./EditButton";
+import "../App.css";
+import TitleNavigator from "./TitleNavigator";
+import {FormModal} from "./FormModal";
+import FormContent from "./FormContent";
 
 const BookSummaryPage = () => {
+    const [isFormModalVisible, setFormModalVisible] = useState(false);
+    const showFormModal = () => {
+        setFormModalVisible(true);
+    }
+
+    const closeFormModal = () => {
+        setFormModalVisible(false);
+    }
+
     return (
         <div id="book-box">
             <div id="book-container">
-                <div className="article-content">
-                    <article>
-                        <h2 className="article-title">SUMMARY</h2>
-                    </article>
-                </div>
+                <SummaryContent/>
                 <div className="content-row">
-                    <div className="edit-column">
-                        <div className="edit-svg">
-                            <EditSvg/>
-                        </div>
-                    </div>
-                    <div className="title-navigator">
-                        <TurnToTitleSvg/>
-                    </div>
+                    <EditModal onEdit={showFormModal}/>
+                    <FormModal visible={isFormModalVisible} onCancel={closeFormModal}>
+                        <FormContent/>
+                    </FormModal>
+                    <TitleNavigator/>
                 </div>
             </div>
 
