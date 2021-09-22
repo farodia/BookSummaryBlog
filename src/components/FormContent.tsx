@@ -3,7 +3,7 @@ import '../modal.css'
 
 const FormContent = () => {
     return (
-        <form>
+        <form id="form-content">
             <div className="modal-body">
                 <ul>
                     📚书籍名称：
@@ -15,7 +15,7 @@ const FormContent = () => {
                 </ul>
             </div>
             <input type="submit" value="提交" className="modal-confirm-btn"/>
-            <input type="submit" value="取消" className="modal-cancel-btn" />
+            <input type="reset" value="重置" className="modal-cancel-btn" />
         </form>
     );
 }
