@@ -7,8 +7,6 @@ interface CloseModalProps {
 
 
 const HeaderPartOfModal : FC<CloseModalProps>= ({titleElement,onClose}) => {
-    // const element = "书籍登记";
-    console.log(titleElement);
     return (
         <div className="modal-header">
             <div className="modal-title">{titleElement}</div>

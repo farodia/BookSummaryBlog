@@ -12,7 +12,7 @@ const articleReducer = (state = initialState, action: Actions) => {
         case ActionTypes.EDIT:
             return action.payload;
         case ActionTypes.ADD_CARD:
-            return +action.payload.cardId + 1;
+            return { ...state, cardId:+ action.payload.cardId + 1};
         case ActionTypes.DELETE_CARD:
             return +action.payload.cardId - 1;
         default:

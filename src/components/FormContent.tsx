@@ -1,6 +1,5 @@
 import React, {FC, useState} from "react";
 import '../modal.css'
-import {FormModal} from "./FormModal";
 import {useDispatch,useSelector} from "react-redux";
 import {bindActionCreators} from "redux";
 import {actionCreators, State} from "../state";
@@ -11,7 +10,7 @@ interface FormContentProps{
 
 export const FormContent: FC<FormContentProps> = ({onClose}) => {
     const dispatch = useDispatch();
-    const {EditArticleContent,AddCard,DeleteCard} = bindActionCreators(actionCreators,dispatch);
+    const {EditArticleContent} = bindActionCreators(actionCreators,dispatch);
     const articleInfo = useSelector((state:State)=>state.articles);
     const [articleTitle,setArticleTitle] = useState("");
     const [articleSummary,setArticleSummary] = useState("");
