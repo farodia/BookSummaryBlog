@@ -1,15 +1,17 @@
 import React, {FC} from "react";
 
 interface CloseModalProps {
-    onClose?: ()=>void
+    titleElement?: string,
+    onClose: ()=>void
 }
 
 
-const HeaderPartOfModal : FC<CloseModalProps>= ({onClose}) => {
-    const element = "书籍登记";
+const HeaderPartOfModal : FC<CloseModalProps>= ({titleElement,onClose}) => {
+    // const element = "书籍登记";
+    console.log(titleElement);
     return (
         <div className="modal-header">
-            <div className="modal-title">{element}</div>
+            <div className="modal-title">{titleElement}</div>
             <div className="modal-close" onClick={onClose}>
                 <svg width="20" height="20" viewBox="0 0 129 127" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clipPath="url(#clip0)">

@@ -7,7 +7,7 @@ interface FormModalProps {
     visible: boolean,
     title?: React.ReactChild,
     onOk?: () => void,
-    onCancel?: () => void,
+    onCancel: () => void,
     okText?: String,
     cancelText?: String,
 }
@@ -28,7 +28,7 @@ export const FormModal: FC<FormModalProps> = ({
         <div>
             <div className="modal-mask"/>
             <div className="modal-container">
-                <HeaderPartOfModal onClose={onCancel}/>
+                <HeaderPartOfModal titleElement="书籍登记" onClose={onCancel}/>
                 <div>
                     {children}
                 </div>

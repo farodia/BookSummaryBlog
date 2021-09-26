@@ -217,3 +217,7 @@ textarea {
     border-top: 2px solid whitesmoke;
     height: 260px;
 }
+
+.card-change-toast {
+    height: 100px;
+}
