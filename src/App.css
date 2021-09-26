@@ -145,7 +145,7 @@ nav a:hover {
 }
 
 .edit-svg {
-    padding:10px 0 0 10px;
+    padding:10px 5px 0 10px;
     float:right;
 }
 
@@ -160,7 +160,8 @@ nav a:hover {
 .article-title {
     padding: 0 0 0 25px;
     margin: 5px 681px 0 0;
-    font-family: "Noto Sans Egyptian Hieroglyphs";
+    font-family: "Noto Sans Egyptian Hieroglyphs", serif;
+
 }
 
 .article-content {
@@ -186,9 +187,15 @@ nav a:hover {
     border: 1px solid greenyellow;
 }
 
+.edit-card {
+    padding:10px 0 0 10px;
+    border: 1px solid greenyellow;
+}
+
 .edit-block:hover path{
     fill:black;
 }
+
 
 .title-navigator:hover path{
     fill:black;
@@ -204,3 +211,9 @@ textarea {
 }
 
 
+.summary-box {
+    margin-top: 10px;
+    border: 1px solid pink;
+    border-top: 2px solid whitesmoke;
+    height: 260px;
+}

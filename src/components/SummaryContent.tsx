@@ -1,13 +1,19 @@
 import React from "react";
 import '../App.css';
+import { useSelector} from "react-redux";
+import {State} from "../state";
 
 const SummaryContent = () => {
-    const summary = "这里是总结内容"
+
+    const articleInfo = useSelector((state:State)=>state.articles);
+    const summary = articleInfo["summary"];
     return (
         <div className="article-content">
         <article>
             <h2 className="article-title">SUMMARY</h2>
-            <p className="summary-content">{summary}</p>
+            <div className="summary-box">
+                <p className="summary-content">{summary}</p>
+            </div>
         </article>
     </div>);
 }

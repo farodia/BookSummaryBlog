@@ -8,10 +8,6 @@ interface ArticleContent {
     summary:String
 }
 
-interface CardNumber {
-    cardId:Number
-}
-
 
 export const EditArticleContent = (articleContent: ArticleContent) => {
     return (dispatch:Dispatch<Actions>) => {
@@ -23,21 +19,21 @@ export const EditArticleContent = (articleContent: ArticleContent) => {
     }
 }
 
-export const AddCard = (cardNumber:CardNumber) => {
+export const AddCard = (articleContent: ArticleContent) => {
     return (dispatch:Dispatch<Actions>) => {
         dispatch({
             type: ActionTypes.ADD_CARD,
-            payload:cardNumber
+            payload:articleContent
             }
         )
     }
 }
 
-export const DeleteCard = (cardNumber:CardNumber) => {
+export const DeleteCard = (articleContent: ArticleContent) => {
     return (dispatch:Dispatch<Actions>) => {
         dispatch({
             type: ActionTypes.DELETE_CARD,
-            payload:cardNumber
+            payload:articleContent
             }
         )
     }

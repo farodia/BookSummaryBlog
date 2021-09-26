@@ -1,13 +1,18 @@
 import React, {FC, useState} from "react";
 import '../modal.css'
 import {FormModal} from "./FormModal";
+import {useDispatch,useSelector} from "react-redux";
+import {bindActionCreators} from "redux";
+import {actionCreators, State} from "../state";
 
 interface FormContentProps{
     onClose: ()=>void
 }
 
 export const FormContent: FC<FormContentProps> = ({onClose}) => {
-    const [cardId,setCardId] = useState(1);
+    const dispatch = useDispatch();
+    const {EditArticleContent,AddCard,DeleteCard} = bindActionCreators(actionCreators,dispatch);
+    const articleInfo = useSelector((state:State)=>state.articles);
     const [articleTitle,setArticleTitle] = useState("");
     const [articleSummary,setArticleSummary] = useState("");
     const handleSubmit = (event:any) => {
@@ -15,6 +20,7 @@ export const FormContent: FC<FormContentProps> = ({onClose}) => {
         setArticleTitle(event.target[0].value);
         setArticleSummary(event.target[1].value);
         console.log(articleTitle);
+        EditArticleContent({cardId:articleInfo["cardId"],title:articleTitle,summary:articleSummary});
         onClose();
     }
     const handleReset = () => {

@@ -6,10 +6,6 @@ interface ArticleContent {
     summary:String
 }
 
-interface CardNumber {
-    cardId:Number,
-}
-
 interface EditAction {
     type: ActionTypes.EDIT,
     payload: ArticleContent
@@ -17,12 +13,12 @@ interface EditAction {
 
 interface AddAction {
     type: ActionTypes.ADD_CARD,
-    payload: CardNumber
+    payload: ArticleContent
 }
 
 interface DeleteAction {
     type: ActionTypes.DELETE_CARD,
-    payload: CardNumber
+    payload: ArticleContent
 }
 
 export type Actions = EditAction|AddAction|DeleteAction;
