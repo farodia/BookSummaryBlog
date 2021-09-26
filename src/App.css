@@ -198,4 +198,9 @@ textarea {
     vertical-align: text-top;
 }
 
+.summary-content {
+    float: left;
+    padding-left: 25px;
+}
+
 

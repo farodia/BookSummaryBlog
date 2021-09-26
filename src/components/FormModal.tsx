@@ -32,10 +32,7 @@ export const FormModal: FC<FormModalProps> = ({
                 <div>
                     {children}
                 </div>
-                {/*<div className="modal-footer">*/}
-                {/*    <button className="modal-cancel-btn btn" onClick={onCancel}>{cancelText}</button>*/}
-                {/*    <button className="modal-confirm-btn btn" onClick={onOk}>{okText}</button>*/}
-                {/*</div>*/}
+
             </div>
         </div>)
 }

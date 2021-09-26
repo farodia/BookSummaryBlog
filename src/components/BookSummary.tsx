@@ -4,7 +4,7 @@ import EditModal from "./EditButton";
 import "../App.css";
 import TitleNavigator from "./TitleNavigator";
 import {FormModal} from "./FormModal";
-import FormContent from "./FormContent";
+import {FormContent} from "./FormContent";
 
 const BookSummaryPage = () => {
     const [isFormModalVisible, setFormModalVisible] = useState(false);
@@ -23,7 +23,7 @@ const BookSummaryPage = () => {
                 <div className="content-row">
                     <EditModal onEdit={showFormModal}/>
                     <FormModal visible={isFormModalVisible} onCancel={closeFormModal}>
-                        <FormContent/>
+                        <FormContent onClose={closeFormModal}/>
                     </FormModal>
                     <TitleNavigator/>
                 </div>
