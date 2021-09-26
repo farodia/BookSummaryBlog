@@ -116,10 +116,15 @@ nav a:hover {
 
 #book-box {
     height: 400px;
-    margin: 200px 95px 0 400px;
+    margin: 200px 90px 0 400px;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+
 }
 
-#book-box #book-container {
+#book-container {
     width: 66.67%;
     height: 350px;
     text-align: center;
