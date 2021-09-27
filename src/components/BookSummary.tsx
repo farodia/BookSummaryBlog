@@ -4,12 +4,10 @@ import {BookCard} from "./BookCard";
 
 const BookSummaryPage = () => {
 
-
     return (
         <div id="book-box">
             <BookCard/>
         </div>
-
     );
 }
 export default BookSummaryPage;

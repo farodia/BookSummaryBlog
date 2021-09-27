@@ -1,9 +1,8 @@
 import {ActionTypes} from "../action-types";
-
-interface ArticleContent {
-    cardId:Number,
-    title:String,
-    summary:String
+export interface ArticleContent {
+    cardId: string,
+    title: String,
+    summary: String
 }
 
 interface EditAction {
@@ -13,12 +12,12 @@ interface EditAction {
 
 interface AddAction {
     type: ActionTypes.ADD_CARD,
-    payload: ArticleContent
+    payload: string
 }
 
 interface DeleteAction {
     type: ActionTypes.DELETE_CARD,
-    payload: ArticleContent
+    payload: string
 }
 
 export type Actions = EditAction|AddAction|DeleteAction;

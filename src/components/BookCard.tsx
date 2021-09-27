@@ -5,10 +5,13 @@ import {FormModal} from "./FormModal";
 import {FormContent} from "./FormContent";
 import {CardChangeToast} from "./CardChangeToast";
 import TitleNavigator from "./TitleNavigator";
+import {useSelector} from "react-redux";
+import {State} from "../state";
 
 export const BookCard = () => {
     const [isFormModalVisible, setFormModalVisible] = useState(false);
     const [isCardChangeToastVisible, setCardChangeToastVisible] = useState(false);
+    // const cardIdInfo= useSelector((state:State)=>state.articles)
 
     return (
         <div id="book-container">
@@ -21,7 +24,7 @@ export const BookCard = () => {
                         <FormContent onClose={() => setFormModalVisible(false)}/>
                     </FormModal>
                     <CardChangeToast visible={isCardChangeToastVisible}
-                                     onCancel={() => setCardChangeToastVisible(false)}/>
+                                     onCancel={() => setCardChangeToastVisible(false)} />
                 </div>
                 <TitleNavigator/>
             </div>
