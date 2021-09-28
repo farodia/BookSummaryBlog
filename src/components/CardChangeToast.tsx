@@ -9,7 +9,7 @@ import {OperationButton} from "./OperationButton";
 interface CardChangeToastProps {
     visible:boolean,
     onCancel: ()=>void,
-    cardIndex?:number
+    cardIndex:string
 }
 
 export const CardChangeToast :FC<CardChangeToastProps> = ({visible,onCancel,cardIndex}) => {
@@ -17,20 +17,19 @@ export const CardChangeToast :FC<CardChangeToastProps> = ({visible,onCancel,card
     const articleInfo = useSelector((state:State)=>state.articles);
     console.log(articleInfo);
 
-    const cardId = (new Date()).valueOf();
-    console.log(cardId);
+    const newCardId = (new Date()).valueOf();
+    console.log("newCardId",newCardId);
     const dispatch = useDispatch();
     const {AddCard,DeleteCard} = bindActionCreators(actionCreators,dispatch);
-    console.log("tap toast",articleInfo["cardId"]);
+    console.log("tap toast card index is",cardIndex);
 
     const deleteCard = () => {
-        DeleteCard(articleInfo["cardId"]);
+        DeleteCard(cardIndex);
         console.log("delete card",articleInfo["cardId"]);
         onCancel();
     }
     const addCard = () => {
-        AddCard(String(cardId));
-        console.log("add card",articleInfo["cardId"]);
+        AddCard(String(newCardId));
         onCancel();
     }
 
@@ -46,7 +45,7 @@ export const CardChangeToast :FC<CardChangeToastProps> = ({visible,onCancel,card
             <div className="modal-container">
                 <HeaderPartOfModal onClose={onCancel}/>
                 {/*TODO 判断逻辑有问题*/}
-                <OperationButton cardId={articleInfo["cardId"]} onAdd={addCard} onDelete={deleteCard}/>
+                <OperationButton cardId={cardIndex} onAdd={addCard} onDelete={deleteCard}/>
             </div>
         </div>
     );
