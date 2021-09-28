@@ -8,8 +8,12 @@ const initialState = {
 
 const articleReducer:Reducer<any, Actions> = (state = initialState, action) => {
     switch (action.type) {
-        case ActionTypes.EDIT:
-            return action.payload;
+        case ActionTypes.EDIT:{
+            state.bookCards.splice(action.payload.cardIndex, 1, action.payload.cardInfo);
+            return state;
+        }
+            // 返回值的问题
+            // return {bookCards:[...state.bookCards,action.payload.cardInfo]};
         case ActionTypes.ADD_CARD:
             return {bookCards:[...state.bookCards,{cardId: action.payload,title: "这里是书籍标题", summary:"这里是你的总结"}]};
         case ActionTypes.DELETE_CARD:

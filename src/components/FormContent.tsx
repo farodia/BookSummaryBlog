@@ -5,13 +5,14 @@ import {bindActionCreators} from "redux";
 import {actionCreators, State} from "../state";
 
 interface FormContentProps{
-    onClose: ()=>void
+    onClose: ()=>void,
+    cardId:string,
+    cardIndex:number
 }
 
-export const FormContent: FC<FormContentProps> = ({onClose}) => {
+export const FormContent: FC<FormContentProps> = ({onClose,cardId,cardIndex}) => {
     const dispatch = useDispatch();
     const {EditArticleContent} = bindActionCreators(actionCreators,dispatch);
-    const articleInfo = useSelector((state:State)=>state.articles);
     const [articleTitle,setArticleTitle] = useState("");
     const [articleSummary,setArticleSummary] = useState("");
     const handleSubmit = (event:any) => {
@@ -19,7 +20,7 @@ export const FormContent: FC<FormContentProps> = ({onClose}) => {
         setArticleTitle(event.target[0].value);
         setArticleSummary(event.target[1].value);
         console.log(articleTitle);
-        EditArticleContent({cardId:articleInfo["cardId"],title:articleTitle,summary:articleSummary});
+        EditArticleContent({cardIndex:cardIndex,cardInfo:{cardId:cardId,title:articleTitle,summary:articleSummary}});
         onClose();
     }
     const handleReset = () => {

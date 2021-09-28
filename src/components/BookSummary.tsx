@@ -1,33 +1,33 @@
-import React from "react";
+import React, {useEffect} from "react";
 import "../App.css";
 import {BookCard} from "./BookCard";
 import {State} from "../state";
 import {useSelector} from "react-redux";
 
 const BookSummaryPage = () => {
-    const cardIdInfo= useSelector((state:State)=>state.articles["bookCards"]);
-    const cardsAmounts = cardIdInfo.length;
-    console.log("this is bookCards");
-    function showCards(cardIdInfo:Array<object>) {
+    const cardIdInfo = useSelector((state: State) => state.articles["bookCards"]);
+    console.log("this is raw bookCards",cardIdInfo);
+    function showCards(cardIdInfo: Array<object>) {
         return (
-         cardIdInfo.map((card:any,index)=>{
-             console.log("this is card",card.cardId);
-             return (
-                 <li key={index}>
-                     <BookCard cardId ={card.cardId}/>
-                 </li>
-             );
-         })
+            <div>
+                {cardIdInfo?cardIdInfo.map((card: any, index) => {
+                return (
+                <div key={index}>
+                <BookCard cardId={card.cardId} cardIndex={index}/>
+                </div>
+                );
+            }):"Loading...."}
+            </div>
+
         );
     }
 
     return (
         <div id="book-box">
-            {/*<BookCard/>*/}
-            {showCards(cardIdInfo)}
-            {/*<ul>*/}
-
-            {/*</ul>*/}
+            <ul>
+                {/*<BookCard cardId={card.cardId} cardIndex={index}/>*/}
+                {showCards(cardIdInfo)}
+            </ul>
         </div>
     );
 }

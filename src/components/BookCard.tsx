@@ -9,9 +9,10 @@ import {useSelector} from "react-redux";
 import {State} from "../state";
 
 interface BookCardProps {
-    cardId: string
+    cardId: string,
+    cardIndex:number
 }
-export const BookCard:FC<BookCardProps> = ({cardId}) => {
+export const BookCard:FC<BookCardProps> = ({cardId,cardIndex}) => {
     const [isFormModalVisible, setFormModalVisible] = useState(false);
     const [isCardChangeToastVisible, setCardChangeToastVisible] = useState(false);
 
@@ -23,7 +24,7 @@ export const BookCard:FC<BookCardProps> = ({cardId}) => {
                     <EditIcons onEdit={() => setFormModalVisible(true)}
                                onChange={() => setCardChangeToastVisible(true)}/>
                     <FormModal visible={isFormModalVisible} onCancel={() => setFormModalVisible(false)}>
-                        <FormContent onClose={() => setFormModalVisible(false)}/>
+                        <FormContent onClose={() => setFormModalVisible(false)} cardId={cardId} cardIndex={cardIndex}/>
                     </FormModal>
                     <CardChangeToast cardIndex={cardId} visible={isCardChangeToastVisible}
                                      onCancel={() => setCardChangeToastVisible(false)} />

@@ -15,21 +15,19 @@ interface CardChangeToastProps {
 export const CardChangeToast :FC<CardChangeToastProps> = ({visible,onCancel,cardIndex}) => {
     //TODO 选择此卡对应的ID
     const articleInfo = useSelector((state:State)=>state.articles);
-    console.log(articleInfo);
-
     const newCardId = (new Date()).valueOf();
-    console.log("newCardId",newCardId);
     const dispatch = useDispatch();
     const {AddCard,DeleteCard} = bindActionCreators(actionCreators,dispatch);
     console.log("tap toast card index is",cardIndex);
 
     const deleteCard = () => {
         DeleteCard(cardIndex);
-        console.log("delete card",articleInfo["cardId"]);
+        console.log("after delete card",articleInfo);//此时还有之前的记录
         onCancel();
     }
     const addCard = () => {
         AddCard(String(newCardId));
+        console.log("after add card",articleInfo);//此时还是之前的记录
         onCancel();
     }
 
@@ -44,7 +42,6 @@ export const CardChangeToast :FC<CardChangeToastProps> = ({visible,onCancel,card
             <div className="modal-mask"/>
             <div className="modal-container">
                 <HeaderPartOfModal onClose={onCancel}/>
-                {/*TODO 判断逻辑有问题*/}
                 <OperationButton cardId={cardIndex} onAdd={addCard} onDelete={deleteCard}/>
             </div>
         </div>
