@@ -18,7 +18,6 @@ export const CardChangeToast :FC<CardChangeToastProps> = ({visible,onCancel,card
     const newCardId = (new Date()).valueOf();
     const dispatch = useDispatch();
     const {AddCard,DeleteCard} = bindActionCreators(actionCreators,dispatch);
-    console.log("tap toast card index is",cardIndex);
 
     const deleteCard = () => {
         DeleteCard(cardIndex);

@@ -1,5 +1,5 @@
 import '../modal.css'
-import React, {FC, ReactChildren} from "react";
+import React, {FC} from "react";
 import HeaderPartOfModal from "./CloseIcon";
 
 interface FormModalProps {

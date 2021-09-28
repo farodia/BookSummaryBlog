@@ -2,23 +2,22 @@ import React, {FC} from "react";
 import '../App.css';
 import {useSelector} from "react-redux";
 import {State} from "../state";
+import {BackCard, FrontCard} from "./FrontAndBackCardContent";
 interface SummaryContentProps {
     cardIndex: number;
+    isFrontCard:boolean
 }
 
-const SummaryContent:FC<SummaryContentProps> = ({cardIndex=1}) => {
+const SummaryContent:FC<SummaryContentProps> = ({cardIndex=1,isFrontCard= true}) => {
 
     const articleInfo = useSelector((state: State) => state.articles["bookCards"]);
-    console.log("articleInfo",articleInfo);
     const summary = articleInfo[cardIndex].summary;
-    console.log("summary is",summary);
+    const title =  articleInfo[cardIndex].title;
     return (
         <div className="article-content">
             <article>
-                <h2 className="article-title">SUMMARY</h2>
-                <div className="summary-box">
-                    <p className="summary-content">{summary}</p>
-                </div>
+                <FrontCard frontCardContent={summary} visible={isFrontCard}/>
+                <BackCard backCardContent={title} visible={isFrontCard}/>
             </article>
         </div>);
 }

@@ -5,8 +5,6 @@ import {FormModal} from "./FormModal";
 import {FormContent} from "./FormContent";
 import {CardChangeToast} from "./CardChangeToast";
 import TitleNavigator from "./TitleNavigator";
-import {useSelector} from "react-redux";
-import {State} from "../state";
 
 interface BookCardProps {
     cardId: string,
@@ -15,10 +13,11 @@ interface BookCardProps {
 export const BookCard:FC<BookCardProps> = ({cardId,cardIndex}) => {
     const [isFormModalVisible, setFormModalVisible] = useState(false);
     const [isCardChangeToastVisible, setCardChangeToastVisible] = useState(false);
+    const [isShowRightArrow,setShowRightArrow] = useState(true);
 
     return (
         <div id="book-container">
-            <SummaryContent cardIndex={cardIndex}/>
+            <SummaryContent cardIndex={cardIndex} isFrontCard={isShowRightArrow} />
             <div>
                 <div>
                     <EditIcons onEdit={() => setFormModalVisible(true)}
@@ -29,7 +28,7 @@ export const BookCard:FC<BookCardProps> = ({cardId,cardIndex}) => {
                     <CardChangeToast cardIndex={cardId} visible={isCardChangeToastVisible}
                                      onCancel={() => setCardChangeToastVisible(false)} />
                 </div>
-                <TitleNavigator/>
+                <TitleNavigator isRightArrow={isShowRightArrow} showRightArrow={()=>{setShowRightArrow(!isShowRightArrow)}}/>
             </div>
 
         </div>
