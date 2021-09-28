@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {FC, useState} from "react";
 import SummaryContent from "./SummaryContent";
 import EditIcons from "./EditButton";
 import {FormModal} from "./FormModal";
@@ -8,10 +8,12 @@ import TitleNavigator from "./TitleNavigator";
 import {useSelector} from "react-redux";
 import {State} from "../state";
 
-export const BookCard = () => {
+interface BookCardProps {
+    cardId: string
+}
+export const BookCard:FC<BookCardProps> = ({cardId}) => {
     const [isFormModalVisible, setFormModalVisible] = useState(false);
     const [isCardChangeToastVisible, setCardChangeToastVisible] = useState(false);
-    // const cardIdInfo= useSelector((state:State)=>state.articles)
 
     return (
         <div id="book-container">

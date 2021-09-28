@@ -138,6 +138,7 @@ nav a:hover {
     display: flex;
     -webkit-flex-direction: row;
     flex-direction: row;
+    margin-bottom: 60px;
 }
 
 .edit-column {
