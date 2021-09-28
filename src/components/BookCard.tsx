@@ -18,7 +18,7 @@ export const BookCard:FC<BookCardProps> = ({cardId,cardIndex}) => {
 
     return (
         <div id="book-container">
-            <SummaryContent/>
+            <SummaryContent cardIndex={cardIndex}/>
             <div>
                 <div>
                     <EditIcons onEdit={() => setFormModalVisible(true)}

@@ -6,17 +6,18 @@ import {useSelector} from "react-redux";
 
 const BookSummaryPage = () => {
     const cardIdInfo = useSelector((state: State) => state.articles["bookCards"]);
-    console.log("this is raw bookCards",cardIdInfo);
+    console.log("this is raw bookCards", cardIdInfo);
+
     function showCards(cardIdInfo: Array<object>) {
         return (
             <div>
-                {cardIdInfo?cardIdInfo.map((card: any, index) => {
-                return (
-                <div key={index}>
-                <BookCard cardId={card.cardId} cardIndex={index}/>
-                </div>
-                );
-            }):"Loading...."}
+                {cardIdInfo ? cardIdInfo.map((card: any, index) => {
+                    return (
+                        <div key={index}>
+                            <BookCard cardId={card.cardId} cardIndex={index}/>
+                        </div>
+                    );
+                }) : "Loading...."}
             </div>
 
         );
@@ -25,7 +26,6 @@ const BookSummaryPage = () => {
     return (
         <div id="book-box">
             <ul>
-                {/*<BookCard cardId={card.cardId} cardIndex={index}/>*/}
                 {showCards(cardIdInfo)}
             </ul>
         </div>
