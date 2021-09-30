@@ -1,6 +1,6 @@
 import '../App.css';
 import React from "react";
-const NavigationComponent=()=>{
+const Navigation=()=>{
     return (
         <nav className="main-nav">
             <ul>
@@ -11,4 +11,4 @@ const NavigationComponent=()=>{
         </nav>
     );
 }
-export default NavigationComponent;
+export default Navigation;

@@ -1,31 +1,31 @@
 import React from 'react';
 import './App.css';
-import SearchComponent from "./components/Search";
-import NavigationComponent from "./components/Navigation";
-import BookSummaryPage from './components/BookSummary';
-import {useDispatch,useSelector} from "react-redux";
-import {bindActionCreators} from "redux";
-import {actionCreators,State} from "./state/index"
-import {AddCard, EditArticleContent} from "./state/action-creator";
+import Search from "./components/Search";
+import Navigation from "./components/Navigation";
+import BookSummary from "./components/BookSummary";
 
 function App() {
-    const dispatch = useDispatch();
-    const {EditArticleContent,AddCard,DeleteCard} = bindActionCreators(actionCreators,dispatch);
-    const ArticleInfo = useSelector((state:State)=>state.articles);
 
     return (
         <div className="App">
-            <header id="header-container">
-                <div id="header">
-                    <div id="header-title">
-                        <a>Book.LOG</a>
+            {/*改成css>*/}
+            <header className="header-container">
+                <div className="header">
+                    <div className="header-title">
+                        <span className="header-span">🄱</span>
+                        <span>🅾🅾🅺.</span>
+                        <span className="header-span">🄻🄾🄶</span>
                     </div>
-                    <NavigationComponent/>
-                    <SearchComponent/>
+                    <Navigation/>
+                    <Search/>
                 </div>
             </header>
-            <BookSummaryPage />
-            <footer>
+            <BookSummary />
+            <footer className="footer-background">
+                <div className="footer-content">
+                    <div className="footer-title">More...</div>
+                    <a href="https://github.com/farodia/WebApp" className="item">GitHub</a>
+                </div>
             </footer>
         </div>
     );

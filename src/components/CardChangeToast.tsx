@@ -9,23 +9,22 @@ import {OperationButton} from "./OperationButton";
 interface CardChangeToastProps {
     visible:boolean,
     onCancel: ()=>void,
-    cardIndex:string
+    cardOrder:string
 }
 
-export const CardChangeToast :FC<CardChangeToastProps> = ({visible,onCancel,cardIndex}) => {
-    //TODO 选择此卡对应的ID
+export const CardChangeToast :FC<CardChangeToastProps> = ({visible,onCancel,cardOrder}) => {
     const articleInfo = useSelector((state:State)=>state.articles);
     const newCardId = (new Date()).valueOf();
     const dispatch = useDispatch();
-    const {AddCard,DeleteCard} = bindActionCreators(actionCreators,dispatch);
+    const {addCards,deleteCards} = bindActionCreators(actionCreators,dispatch);
 
     const deleteCard = () => {
-        DeleteCard(cardIndex);
+        deleteCards(cardOrder);
         console.log("after delete card",articleInfo);//此时还有之前的记录
         onCancel();
     }
     const addCard = () => {
-        AddCard(String(newCardId));
+        addCards(String(newCardId));
         console.log("after add card",articleInfo);//此时还是之前的记录
         onCancel();
     }
@@ -41,7 +40,7 @@ export const CardChangeToast :FC<CardChangeToastProps> = ({visible,onCancel,card
             <div className="modal-mask"/>
             <div className="modal-container">
                 <HeaderPartOfModal onClose={onCancel}/>
-                <OperationButton cardId={cardIndex} onAdd={addCard} onDelete={deleteCard}/>
+                <OperationButton cardId={cardOrder} onAdd={addCard} onDelete={deleteCard}/>
             </div>
         </div>
     );

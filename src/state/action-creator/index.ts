@@ -3,7 +3,7 @@ import {Dispatch} from "redux";
 import {Actions, ArticleContent} from "../actions";
 
 
-export const EditArticleContent = (articleContent: ArticleContent) => {
+export const editArticleContent = (articleContent: ArticleContent) => {
     return (dispatch: Dispatch<Actions>) => {
         dispatch({
                 type: ActionTypes.EDIT,
@@ -13,7 +13,7 @@ export const EditArticleContent = (articleContent: ArticleContent) => {
     }
 }
 
-export const AddCard = (cardId: string) => {
+export const addCards = (cardId: string) => {
     return (dispatch: Dispatch<Actions>) => {
         dispatch({
                 type: ActionTypes.ADD_CARD,
@@ -23,7 +23,7 @@ export const AddCard = (cardId: string) => {
     }
 }
 
-export const DeleteCard = (cardId: string) => {
+export const deleteCards = (cardId: string) => {
         // TODO 为什么会报错
         return (dispatch:Dispatch<Actions>) => {
         dispatch({

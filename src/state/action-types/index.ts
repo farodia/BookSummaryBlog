@@ -1,5 +1,5 @@
 export enum ActionTypes {
-    EDIT="edit",
+    EDIT,
     ADD_CARD="addCard",
     DELETE_CARD="deleteCard"
 }

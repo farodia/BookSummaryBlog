@@ -1,34 +1,22 @@
-import React, {useEffect} from "react";
+import React from "react";
 import "../App.css";
 import {BookCard} from "./BookCard";
 import {State} from "../state";
 import {useSelector} from "react-redux";
+import {CardInfo} from "../state/reducers/articleReducer";
 
-const BookSummaryPage = () => {
+const BookSummary = () => {
     const cardIdInfo = useSelector((state: State) => state.articles["bookCards"]);
     console.log("this is raw bookCards", cardIdInfo);
 
-    function showCards(cardIdInfo: Array<object>) {
-        return (
-            <div>
-                {cardIdInfo ? cardIdInfo.map((card: any, index) => {
-                    return (
-                        <div key={index}>
-                            <BookCard cardId={card.cardId} cardIndex={index}/>
-                        </div>
-                    );
-                }) : "Loading...."}
-            </div>
-
-        );
-    }
-
     return (
-        <div id="book-box">
-            <ul>
-                {showCards(cardIdInfo)}
-            </ul>
+        <div className="book-box" >
+            {cardIdInfo ? cardIdInfo.map((card: CardInfo, index: number) => {
+                return (
+                    <BookCard key={index} cardId={card.cardId} cardOrder={index}/>
+                );
+            }) : "Loading...."}
         </div>
     );
 }
-export default BookSummaryPage;
+export default BookSummary;

@@ -4,15 +4,15 @@ import {useSelector} from "react-redux";
 import {State} from "../state";
 import {BackCard, FrontCard} from "./FrontAndBackCardContent";
 interface SummaryContentProps {
-    cardIndex: number;
+    cardOrder: number;
     isFrontCard:boolean
 }
 
-const SummaryContent:FC<SummaryContentProps> = ({cardIndex=1,isFrontCard= true}) => {
+const SummaryContent:FC<SummaryContentProps> = ({cardOrder=1,isFrontCard= true}) => {
 
     const articleInfo = useSelector((state: State) => state.articles["bookCards"]);
-    const summary = articleInfo[cardIndex].summary;
-    const title =  articleInfo[cardIndex].title;
+    const summary = articleInfo[cardOrder].summary;
+    const title =  articleInfo[cardOrder].title;
     return (
         <div className="article-content">
             <article>

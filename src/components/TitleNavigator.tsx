@@ -1,4 +1,4 @@
-import React, {FC, useState} from "react";
+import React, {FC} from "react";
 import '../App.css';
 import RightArrow from "../_svg/RightArrow";
 import LeftArrow from "../_svg/LeftArrow";

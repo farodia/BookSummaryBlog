@@ -1,7 +1,7 @@
 import {ActionTypes} from "../action-types";
 
 export interface ArticleContent {
-    cardIndex: number,
+    cardOrder: number,
     cardInfo: {
         cardId: string,
         title: string,
