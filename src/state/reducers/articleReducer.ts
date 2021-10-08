@@ -15,7 +15,7 @@ export interface CardInfo {
 interface States {
     bookCards:({cardId: string, title:string, summary:string})[]
 }
-
+//TODO any Type
 export const articleReducer:Reducer<any, Actions> = (state = initialState, action) => {
     switch (action.type) {
         case ActionTypes.EDIT:{

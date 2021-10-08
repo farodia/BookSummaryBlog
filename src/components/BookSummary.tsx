@@ -6,12 +6,10 @@ import {useSelector} from "react-redux";
 import {CardInfo} from "../state/reducers/articleReducer";
 
 const BookSummary = () => {
-    const cardIdInfo = useSelector((state: State) => state.articles["bookCards"]);
-    console.log("this is raw bookCards", cardIdInfo);
-
+    const cards = useSelector((state: State) => state.articles["bookCards"]);
     return (
         <div className="book-box" >
-            {cardIdInfo ? cardIdInfo.map((card: CardInfo, index: number) => {
+            {cards ? cards.map((card: CardInfo, index: number) => {
                 return (
                     <BookCard key={index} cardId={card.cardId} cardOrder={index}/>
                 );
