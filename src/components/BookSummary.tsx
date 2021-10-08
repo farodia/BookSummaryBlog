@@ -6,10 +6,10 @@ import {useSelector} from "react-redux";
 import {CardInfo} from "../state/reducers/articleReducer";
 
 const BookSummary = () => {
-    const cards = useSelector((state: State) => state.articles["bookCards"]);
+    const bookCards = useSelector((state: State) => state.articles["bookCards"]);
     return (
         <div className="book-box" >
-            {cards ? cards.map((card: CardInfo, index: number) => {
+            {bookCards ? bookCards.map((card: CardInfo, index: number) => {
                 return (
                     <BookCard key={index} cardId={card.cardId} cardOrder={index}/>
                 );

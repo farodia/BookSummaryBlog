@@ -1,16 +1,16 @@
 import React, {FC} from "react";
 import '../App.css';
-interface FrontCardContentProps {
+interface FrontContentProps {
     frontCardContent: string,
     visible:boolean
 }
 
-interface BackCardContentProps {
+interface BackContentProps {
     backCardContent: string,
     visible:boolean
 }
 
-export const FrontCard: FC<FrontCardContentProps> = ({frontCardContent,visible=true}) => {
+export const Front: FC<FrontContentProps> = ({frontCardContent,visible=true}) => {
     const frontCardTitle = "Summary";
     if (!visible){
         return null;
@@ -25,7 +25,7 @@ export const FrontCard: FC<FrontCardContentProps> = ({frontCardContent,visible=t
     );
 }
 
-export const BackCard: FC<BackCardContentProps> = ({backCardContent,visible=false}) => {
+export const Back: FC<BackContentProps> = ({backCardContent,visible=false}) => {
     const backCardTitle = "Title";
     if (visible) {
         return null;

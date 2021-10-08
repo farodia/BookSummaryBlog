@@ -1,6 +1,6 @@
 import React, {FC} from "react";
 import '../App.css';
-import {BackCard, FrontCard} from "./FrontAndBackCardContent";
+import {Back, Front} from "./FrontAndBackCardContent";
 import {useBooks} from "../hooks/useBooks";
 interface SummaryContentProps {
     cardOrder: number;
@@ -12,8 +12,8 @@ const SummaryContent:FC<SummaryContentProps> = ({cardOrder=1,isFrontCard= true})
     return (
         <div className="article-content">
             <article>
-                <FrontCard frontCardContent={summary} visible={isFrontCard}/>
-                <BackCard backCardContent={title} visible={isFrontCard}/>
+                <Front frontCardContent={summary} visible={isFrontCard}/>
+                <Back backCardContent={title} visible={isFrontCard}/>
             </article>
         </div>);
 }
