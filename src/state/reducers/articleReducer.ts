@@ -3,7 +3,7 @@ import {Actions} from "../actions";
 import {Reducer} from "react";
 
 const initialState = {
-    bookCards:[{cardId: "1", title: "这里是书籍标题", summary:"这里是你的总结"}]
+    bookCards:[{cardId: "1", title: "", summary:""}]
 };
 
 export interface CardInfo {
@@ -23,7 +23,7 @@ export const articleReducer:Reducer<any, Actions> = (state = initialState, actio
             return state;
         }
         case ActionTypes.ADD_CARD:
-            return {bookCards:[...state.bookCards,{cardId: action.payload,title: "这里是书籍标题", summary:"这里是你的总结"}]};
+            return {bookCards:[...state.bookCards,{cardId: action.payload,title: "", summary:""}]};
         case ActionTypes.DELETE_CARD:
             return {bookCards: state.bookCards.filter((card:CardInfo)=>card.cardId!==action.payload)};
         default:

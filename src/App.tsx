@@ -8,7 +8,6 @@ function App() {
 
     return (
         <div className="App">
-            {/*改成css>*/}
             <header className="header-container">
                 <div className="header">
                     <div className="header-title">
@@ -23,7 +22,7 @@ function App() {
             <BookSummary />
             <footer className="footer-background">
                 <div className="footer-content">
-                    <div className="footer-title">More...</div>
+                    <div className="footer-title">CHANNELS</div>
                     <a href="https://github.com/farodia/WebApp" className="item">GitHub</a>
                 </div>
             </footer>
