@@ -8,16 +8,17 @@ import TitleNavigator from "./TitleNavigator";
 
 interface BookCardProps {
     cardId: string,
-    cardOrder:number
+    cardOrder: number
 }
-export const BookCard:FC<BookCardProps> = ({cardId,cardOrder}) => {
+
+export const BookCard: FC<BookCardProps> = ({cardId, cardOrder}) => {
     const [isFormModalVisible, setFormModalVisible] = useState(false);
     const [isCardChangeToastVisible, setCardChangeToastVisible] = useState(false);
-    const [isShowRightArrow,setShowRightArrow] = useState(true);
+    const [isShowRightArrow, setShowRightArrow] = useState(true);
 
     return (
         <div className="book-container">
-            <SummaryContent cardOrder={cardOrder} isFrontCard={isShowRightArrow} />
+            <SummaryContent cardOrder={cardOrder} isFrontCard={isShowRightArrow}/>
             <div>
                 <div>
                     <EditIcons onEdit={() => setFormModalVisible(true)}
@@ -26,9 +27,11 @@ export const BookCard:FC<BookCardProps> = ({cardId,cardOrder}) => {
                         <FormContent onClose={() => setFormModalVisible(false)} cardId={cardId} cardOrder={cardOrder}/>
                     </FormModal>
                     <CardChangeToast cardOrder={cardId} visible={isCardChangeToastVisible}
-                                     onCancel={() => setCardChangeToastVisible(false)} />
+                                     onCancel={() => setCardChangeToastVisible(false)}/>
                 </div>
-                <TitleNavigator isRightArrow={isShowRightArrow} showRightArrow={()=>{setShowRightArrow(!isShowRightArrow)}}/>
+                <TitleNavigator isRightArrow={isShowRightArrow} showRightArrow={() => {
+                    setShowRightArrow(!isShowRightArrow)
+                }}/>
             </div>
 
         </div>

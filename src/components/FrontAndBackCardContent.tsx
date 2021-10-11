@@ -34,7 +34,7 @@ export const Back: FC<BackContentProps> = ({backCardContent,visible=false}) => {
         <div>
             <h2 className="article-title">{backCardTitle}</h2>
             <div className="summary-box">
-                <p className="summary-content">{backCardContent}</p>
+                <h2 className="summary-title">《{backCardContent}》</h2>
             </div>
         </div>
     );

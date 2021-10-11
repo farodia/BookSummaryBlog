@@ -123,8 +123,8 @@ nav a:hover {
 }
 
 .book-container {
-    width: 66.67%;
-    height: 350px;
+    width: 68%;
+    height: 330px;
     text-align: center;
     background-color: white;
     border-radius: 0.75rem;
@@ -140,16 +140,17 @@ nav a:hover {
 }
 
 .edit-column {
-    height: 60px;
-    border: 1px solid green;
+    height: 50px;
+    padding-bottom: 5px;
     display: -webkit-flex;
     display: flex;
     -webkit-flex-direction: row;
     flex-direction: row;
+    border-bottom: 2px solid #d7d7d7;
 }
 
 .edit-svg {
-    padding:10px 5px 0 10px;
+    padding:10px 5px 2px 10px;
     float:right;
 }
 
@@ -162,43 +163,31 @@ nav a:hover {
 }
 
 .article-title {
-    padding: 0 0 0 25px;
+    padding: 0 0 10px 25px;
     margin: 5px 681px 0 0;
     font-family: "Noto Sans Egyptian Hieroglyphs", serif;
-
 }
 
 .article-content {
     height: 310px;
     width: 750px;
-    border: 1px solid black;
 }
 
 .title-navigator {
-    height: 250px;
-    width: 120px;
-
-    border: 1px solid red;
+    padding-top: 23%;
 }
 
 .svg-title {
     margin: 70px 12px;
 }
 
-.edit-block {
-    /*margin-left: 681px;*/
-    border: 1px solid greenyellow;
-}
-
 .edit-card {
     padding:10px 0 0 10px;
-    border: 1px solid greenyellow;
 }
 
 .edit-block:hover path{
     fill:black;
 }
-
 
 .title-navigator:hover path{
     fill:black;
@@ -212,17 +201,29 @@ nav a:hover {
     vertical-align: text-top;
 }
 
-.summary-content {
-    float: left;
-    padding-left: 25px;
-}
-
-
 .summary-box {
-    margin-top: 10px;
-    border: 1px solid pink;
     border-top: 2px solid whitesmoke;
     height: 260px;
+}
+
+.summary-content {
+    margin:15px 0 15px 25px;
+    width: 720px;
+    text-align: justify;
+    text-justify: inter-ideograph;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    word-break: break-all;
+    -webkit-box-orient: vertical;
+    white-space: break-spaces;
+    -webkit-line-clamp: 13;
+}
+
+.summary-title {
+    padding-top: 10%;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+    font-size: 36px;
 }
 
 .footer-background {

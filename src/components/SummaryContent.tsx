@@ -11,10 +11,8 @@ const SummaryContent:FC<SummaryContentProps> = ({cardOrder=1,isFrontCard= true})
     const {summary,title} = useBooks(cardOrder);
     return (
         <div className="article-content">
-            <article>
                 <Front frontCardContent={summary} visible={isFrontCard}/>
                 <Back backCardContent={title} visible={isFrontCard}/>
-            </article>
         </div>);
 }
 
