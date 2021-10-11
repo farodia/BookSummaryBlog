@@ -41,7 +41,7 @@ export const FormContent: FC<FormContentProps> = ({onClose, cardId, cardOrder}) 
                 </div>
                 <div className="form-textarea">
                     📃书籍总结：
-                        <textarea required placeholder="请在此记录您对于本书的总结" rows={10} cols={40} name="summary"
+                        <textarea required placeholder="请在此记录您对于本书的总结"  name="summary"
                                   onChange={e => setSummary(e.target.value)} value={summary} />
                 </div>
             </div>

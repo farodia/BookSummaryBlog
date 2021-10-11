@@ -15,7 +15,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     background: white;
-    min-width: 500px;
+    min-width: 460px;
     border-radius: 4px;
     z-index: 1001;
 }
@@ -33,7 +33,7 @@
     font-size: 20px;
 }
 .modal-close {
-    padding: 10px;
+    padding: 10px 15px;
 }
 .modal-close:hover path{
     fill: black;
@@ -44,6 +44,17 @@
     font-size: 16px;
     border-bottom: 1px solid #e8e8e8;
 }
+
+.form-textarea {
+    padding-top: 10px;
+}
+
+.form-textarea > textarea {
+    width: 250px;
+    height: 150px;
+    vertical-align: text-top;
+}
+
 
 .modal-footer {
     text-align: center;
@@ -58,7 +69,6 @@
 }
 
 .modal-cancel-btn {
-
     background: white;
     margin: 30px 0 30px 40px;
     border-color: #d9d9d9;
@@ -82,7 +92,7 @@ ul {
 }
 
 .title-content {
-    width: 333px;
+    width: 250px;
     height: 20px;
 }
 
@@ -99,3 +109,4 @@ ul {
     width: 140px;
     height: 30px;
 }
+

@@ -1,8 +1,6 @@
 .App {
     background-image: url("./pics/web-background.png");
     background-size: cover;
-    width: 100%;
-    height: 100%;
     display: -webkit-flex;
     display: flex;
     -webkit-flex-direction: column;
@@ -23,7 +21,7 @@
 }
 
 .header-container {
-    width: 100%;
+    padding: 25px;
     border-bottom: 2px solid #d0d0d0;
 }
 
@@ -35,7 +33,6 @@
 }
 
 .header-title {
-    flex: 0 0 200px;
     margin: 0 0 0 300px;
     text-align: center;
     align-items: center;
@@ -63,9 +60,6 @@
     }
 }
 
-.main-nav {
-    flex: 0 0 auto;
-}
 
 .main-nav ul {
     text-align: center;
@@ -94,14 +88,13 @@ nav a:hover {
 
 .header-search {
     padding-top: 0.8em;
-    flex: 0 0 200px;
     margin: 0 30px 0 70px;
     text-align: right;
 }
 
 .search-ajax {
     display: inline-block;
-    width: 100%;
+    width: 200px;
 }
 
 .search-ajax input {
@@ -191,14 +184,6 @@ nav a:hover {
 
 .title-navigator:hover path{
     fill:black;
-}
-
-.form-textarea {
-    padding-top: 10px;
-}
-
-.form-textarea > textarea {
-    vertical-align: text-top;
 }
 
 .summary-box {
