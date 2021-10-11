@@ -123,7 +123,7 @@ nav a:hover {
 }
 
 .book-container {
-    width: 68%;
+    width: 880px;
     height: 330px;
     text-align: center;
     background-color: white;
@@ -208,17 +208,16 @@ nav a:hover {
 
 .summary-content {
     margin:10px 0 15px 25px;
-    width: 720px;
+    padding-right: 10px;
+    width: 700px;
+    height: 230px;
     text-align: justify;
     text-justify: inter-ideograph;
-    overflow: hidden;
-    text-overflow: ellipsis;
     display: -webkit-box;
-    word-break: break-all;
     -webkit-box-orient: vertical;
     white-space: break-spaces;
-    -webkit-line-clamp: 10;
     line-height: 25px;
+    overflow-y:auto;
 }
 
 .summary-title {
