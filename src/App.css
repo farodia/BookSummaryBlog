@@ -33,7 +33,7 @@
 }
 
 .header-title {
-    margin: 0 0 0 300px;
+    margin: 0 0 0 220px;
     text-align: center;
     align-items: center;
     color: #0c0c0c;
@@ -71,8 +71,8 @@ nav li {
     display: inline;
     padding: 1em 3.5em 1em 3.5em;
     font-weight: 700;
-    font-size: 1.2rem;
-    font-family: BlinkMacSystemFont, serif;
+    font-size: 24px;
+    font-family: Marker Felt, fantasy;
     color: black;
 }
 
@@ -206,8 +206,8 @@ nav a:hover {
 }
 
 .summary-title {
-    padding-top: 10%;
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+    margin: 15% 200px;
+    font-family: Marker Felt, fantasy;
     font-size: 36px;
 }
 
