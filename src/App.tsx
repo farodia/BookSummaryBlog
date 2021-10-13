@@ -22,7 +22,7 @@ function App() {
             <BookSummary />
             <footer className="footer-background">
                 <div className="footer-content">
-                    <div className="footer-title">CHANNELS</div>
+                    <div className="footer-title">TO BE CONTINUED...</div>
                     <a href="https://github.com/farodia/WebApp" className="item">GitHub</a>
                 </div>
             </footer>
