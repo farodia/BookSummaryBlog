@@ -8,7 +8,7 @@ interface OperationButtonProps {
 }
 
 export const OperationButton: FC<OperationButtonProps> = ({cardId, onAdd, onDelete}) => {
-    console.log("OperationButton card id",cardId)
+    console.log("OperationButton card id",cardId);
     if (cardId === '1') {
         return (<button className="modal-confirm-center-btn" onClick={onAdd}>新增卡片</button>);
     }

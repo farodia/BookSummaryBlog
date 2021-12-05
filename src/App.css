@@ -68,12 +68,12 @@ nav li {
     font-weight: 700;
     font-size: 24px;
     font-family: Marker Felt, fantasy;
-    color: black;
 }
 
 nav a {
     padding: 4px 20px;
     cursor: default;
+    color: black;
 }
 
 nav a:hover {

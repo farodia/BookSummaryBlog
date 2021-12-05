@@ -1,25 +1,22 @@
 import React from 'react';
 import './App.css';
-import Search from "./components/Search";
-import Navigation from "./components/Navigation";
 import BookSummary from "./components/BookSummary";
+import {HeaderContainer} from "./components/HeaderContainer";
+import {BrowserRouter as Router, Route,Routes} from "react-router-dom";
+import {About} from "./components/About";
+
 
 function App() {
 
     return (
+        <Router>
         <div className="App">
-            <header className="header-container">
-                <div className="header">
-                    <div className="header-title">
-                        <span className="header-span">🄱</span>
-                        <span>🅾🅾🅺.</span>
-                        <span className="header-span">🄻🄾🄶</span>
-                    </div>
-                    <Navigation/>
-                    <Search/>
-                </div>
-            </header>
-            <BookSummary />
+            <HeaderContainer />
+            <Routes>
+               <Route path="/" element={<BookSummary />} />
+                <Route path="about" element={<About />} />
+            </Routes>
+
             <footer className="footer-background">
                 <div className="footer-content">
                     <div className="footer-title">TO BE CONTINUED...</div>
@@ -27,6 +24,7 @@ function App() {
                 </div>
             </footer>
         </div>
+        </Router>
     );
 }
 

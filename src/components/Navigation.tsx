@@ -1,14 +1,15 @@
 import '../App.css';
 import React from "react";
-const Navigation=()=>{
+import {Link, NavLink} from 'react-router-dom';
+
+export const Navigation=()=>{
     return (
-        <nav className="main-nav">
-            <ul>
-                <li><a>HOME</a></li>
-                <li><a>BOOKSHELF</a></li>
-                <li><a>ABOUT</a></li>
-            </ul>
-        </nav>
-    );
+            <nav className="main-nav">
+                <ul>
+                    <li><Link to="/" >HOME</Link></li>
+                    <li>BOOKSHELF</li>
+                    <li><Link to="about">ABOUT</Link></li>
+                </ul>
+            </nav>
+    )
 }
-export default Navigation;

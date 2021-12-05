@@ -1,5 +1,6 @@
 import {calculator} from "./calculator";
 const {sum,multiple} = calculator();
+// console.log(zoo.getAnimals());
 // test('3 plus 5 is 8',()=>{
 //     expect(sum(3,5)).toBe(8);
 // })
