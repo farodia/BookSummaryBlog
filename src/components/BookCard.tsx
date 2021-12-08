@@ -26,7 +26,7 @@ export const BookCard: FC<BookCardProps> = ({cardId, cardOrder}) => {
                     <FormModal visible={isFormModalVisible} onCancel={() => setFormModalVisible(false)}>
                         <FormContent onClose={() => setFormModalVisible(false)} cardId={cardId} cardOrder={cardOrder}/>
                     </FormModal>
-                    <CardChangeToast cardOrder={cardId} visible={isCardChangeToastVisible}
+                    <CardChangeToast cardId={cardId} visible={isCardChangeToastVisible}
                                      onCancel={() => setCardChangeToastVisible(false)}/>
                 </div>
                 <TitleNavigator isRightArrow={isShowRightArrow} showRightArrow={() => {

@@ -15,7 +15,7 @@ export const OperationButton: FC<OperationButtonProps> = ({cardId, onAdd, onDele
     return (
         <div className="card-change-toast">
             <button className="modal-confirm-btn" onClick={onAdd}>新增卡片</button>
-            <button className="modal-cancel-btn" onClick={onDelete}>删除此卡</button>
+            <button className="modal-cancel-btn" onClick={onDelete} >删除此卡</button>
         </div>
     )
 }
