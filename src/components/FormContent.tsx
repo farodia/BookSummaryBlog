@@ -4,6 +4,7 @@ import {useDispatch} from "react-redux";
 import {bindActionCreators} from "redux";
 import {actionCreators} from "../state";
 import {useBooks} from "../hooks/useBooks";
+import {changeCard} from "../hooks/changeCard";
 
 interface FormContentProps {
     onClose: () => void,
@@ -14,11 +15,13 @@ interface FormContentProps {
 export const FormContent: FC<FormContentProps> = ({onClose, cardId, cardOrder}) => {
     const dispatch = useDispatch();
     const {editContent} = bindActionCreators(actionCreators, dispatch);
+    const url = "http://localhost:8080";
     const {bookSummary, bookTitle} = useBooks(cardOrder);
     const [title, setTitle] = useState(bookTitle);
     const [summary, setSummary] = useState(bookSummary);
     const handleSubmit = () => {
         editContent({cardOrder: cardOrder, cardInfo: {cardId: cardId, title: title, summary: summary}});
+        changeCard(url,{id: cardId, title: title, summary: summary},'PATCH');
         onClose();
     }
 
