@@ -1,4 +1,5 @@
 import {ActionTypes} from "../action-types";
+import {SummaryCardData} from "../../data_class/SummaryCardData";
 
 export interface ArticleContent {
     cardOrder: number,
@@ -24,4 +25,9 @@ interface DeleteAction {
     payload: string
 }
 
-export type Actions = EditAction | AddAction | DeleteAction;
+interface ShowAction {
+    type: ActionTypes.SHOW_CARDS,
+    payload: Array<SummaryCardData>
+}
+
+export type Actions = EditAction | AddAction | DeleteAction | ShowAction;
