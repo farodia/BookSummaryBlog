@@ -4,8 +4,8 @@ import {State} from "../state";
 export function useBooks(cardOrder: number) {
     const info = useSelector((state: State) => state.articles["bookCards"]);
     const bookSummary = info[cardOrder].summary;
-    const summary = bookSummary === "" ? "这里是你的总结" : bookSummary;
+    const summary = bookSummary === "" ? "Please add your summary here" : bookSummary;
     const bookTitle = info[cardOrder].title;
-    const title = bookTitle === "" ? "这里是书籍标题" : bookTitle;
+    const title = bookTitle === "" ? "This is the book title" : bookTitle;
     return {bookSummary, bookTitle, summary, title};
 }

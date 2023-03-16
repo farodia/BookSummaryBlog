@@ -36,20 +36,20 @@ export const FormContent: FC<FormContentProps> = ({onClose, cardId, cardOrder}) 
         }}>
             <div className="modal-body">
                 <div>
-                    <label>📚书籍名称：
-                        <input className="title-content" required type="text" placeholder="请输入您将记录的书籍名称" name="title"
+                    <label>📚Title：
+                        <input className="title-content" required type="text" placeholder="Please input the book title" name="title"
                                onChange={e => setTitle(e.target.value)} value={title}/>
                     </label>
 
                 </div>
                 <div className="form-textarea">
-                    📃书籍总结：
-                        <textarea required placeholder="请在此记录您对于本书的总结"  name="summary"
+                    📃Summary：
+                        <textarea required placeholder="Please input the book summary"  name="summary"
                                   onChange={e => setSummary(e.target.value)} value={summary} />
                 </div>
             </div>
-            <button className="modal-confirm-btn">提交</button>
-            <button type="button" className="modal-cancel-btn" onClick={handleReset}>重置</button>
+            <button className="modal-confirm-btn">Summit</button>
+            <button type="button" className="modal-cancel-btn" onClick={handleReset}>Reset</button>
         </form>
     );
 }

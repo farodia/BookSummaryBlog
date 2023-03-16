@@ -18,8 +18,8 @@ export const FormModal: FC<FormModalProps> = ({
                                                   visible = false,
                                                   onCancel,
                                                   onOk,
-                                                  okText = "确定",
-                                                  cancelText = "取消"
+                                                  okText = "Summit",
+                                                  cancelText = "Cancel"
                                               }) => {
     if (!visible) {
         return null;
@@ -28,7 +28,7 @@ export const FormModal: FC<FormModalProps> = ({
         <div>
             <div className="modal-mask"/>
             <div className="modal-container">
-                <HeaderPartOfModal titleElement="书籍登记" onClose={onCancel}/>
+                <HeaderPartOfModal titleElement="Record" onClose={onCancel}/>
                 <div>
                     {children}
                 </div>
