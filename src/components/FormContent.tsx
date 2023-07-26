@@ -36,10 +36,7 @@ export const FormContent: FC<FormContentProps> = ({onClose, cardId, cardOrder}) 
         }}>
             <div className="modal-body">
                 <div>
-                    <div>📚Title：</div>
-                    <div>📃Summary：</div>
-                </div>
-                <div>
+                    <span>📚Title：</span>
                     <input className="title-content" required type="text" placeholder="Please input the book title"
                            name="title"
                            onChange={e => setTitle(e.target.value)} value={title}/>
@@ -47,8 +44,9 @@ export const FormContent: FC<FormContentProps> = ({onClose, cardId, cardOrder}) 
                     <div className="form-textarea"/>
 
                     <div>
-                    <textarea required placeholder="Please input the book summary" name="summary"
-                              onChange={e => setSummary(e.target.value)} value={summary}/>
+                        <span>📃Summary：</span>
+                        <textarea required placeholder="Please input the book summary" name="summary"
+                                  onChange={e => setSummary(e.target.value)} value={summary}/>
                     </div>
                 </div>
             </div>
