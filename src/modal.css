@@ -49,7 +49,11 @@
     padding-top: 10px;
 }
 
-.form-textarea > textarea {
+span {
+    margin: 10px 10px 300px 100px;
+}
+
+textarea {
     width: 250px;
     height: 150px;
     vertical-align: text-top;

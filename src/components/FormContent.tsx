@@ -21,7 +21,7 @@ export const FormContent: FC<FormContentProps> = ({onClose, cardId, cardOrder}) 
     const [summary, setSummary] = useState(bookSummary);
     const handleSubmit = () => {
         editContent({cardOrder: cardOrder, cardInfo: {cardId: cardId, title: title, summary: summary}});
-        changeCard(url,{id: cardId, title: title, summary: summary},'PATCH');
+        changeCard(url, {id: cardId, title: title, summary: summary}, 'PATCH');
         onClose();
     }
 
@@ -36,16 +36,20 @@ export const FormContent: FC<FormContentProps> = ({onClose, cardId, cardOrder}) 
         }}>
             <div className="modal-body">
                 <div>
-                    <label>📚Title：
-                        <input className="title-content" required type="text" placeholder="Please input the book title" name="title"
-                               onChange={e => setTitle(e.target.value)} value={title}/>
-                    </label>
-
+                    <div>📚Title：</div>
+                    <div>📃Summary：</div>
                 </div>
-                <div className="form-textarea">
-                    📃Summary：
-                        <textarea required placeholder="Please input the book summary"  name="summary"
-                                  onChange={e => setSummary(e.target.value)} value={summary} />
+                <div>
+                    <input className="title-content" required type="text" placeholder="Please input the book title"
+                           name="title"
+                           onChange={e => setTitle(e.target.value)} value={title}/>
+
+                    <div className="form-textarea"/>
+
+                    <div>
+                    <textarea required placeholder="Please input the book summary" name="summary"
+                              onChange={e => setSummary(e.target.value)} value={summary}/>
+                    </div>
                 </div>
             </div>
             <button className="modal-confirm-btn">Summit</button>
