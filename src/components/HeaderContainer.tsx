@@ -11,9 +11,7 @@ export const HeaderContainer=()=>{
             <div className="header">
                 <Link to="/">
                     <div className="header-title">
-                        <span className="header-span">🄱</span>
-                        <span>🅾🅾🅺.</span>
-                        <span className="header-span">🄻🄾🄶</span>
+                        <span className="header-span">🄱🄻🄾🄶</span>
                     </div>
                 </Link>
                 <Navigation/>
