@@ -45,6 +45,7 @@
     color: black;
     padding: 0.2rem;
     flex: 2;
+    display: block;
 }
 
 nav ul {
@@ -74,6 +75,7 @@ nav a:hover {
 .header-search {
     padding-top: 0.8em;
     text-align: right;
+    display: block;
 }
 
 .search-ajax {
@@ -87,6 +89,26 @@ nav a:hover {
     background-color: whitesmoke;
     color: black;
     border: none;
+}
+
+.min-menu {
+    padding-top: 0.6rem;
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .header-container {
+        justify-content: space-between;
+    }
+    .main-nav {
+        display: none;
+    }
+    .header-search {
+        display: none;
+    }
+    .min-menu {
+        display: block;
+    }
 }
 
 .book-box {

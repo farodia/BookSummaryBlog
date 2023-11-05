@@ -3,6 +3,7 @@ import {Link} from "react-router-dom";
 import {Navigation} from "./Navigation";
 import Search from "./Search";
 import React from "react";
+import {MiniMenu} from './head/MiniMenu'
 
 
 export const HeaderContainer=()=>{
@@ -15,6 +16,7 @@ export const HeaderContainer=()=>{
                 </Link>
                 <Navigation/>
                 <Search/>
+                <MiniMenu/>
         </header>
     )
 }
