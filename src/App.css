@@ -11,10 +11,8 @@
     display: -webkit-flex;
     display: flex;
     flex-direction: row;
-    flex-shrink: 10;
-    justify-content: space-evenly;
-    padding: 25px;
     border-bottom: 2px solid #d0d0d0;
+    padding: 1% 8%;
 }
 
 .header-title {
@@ -80,11 +78,10 @@ nav a:hover {
 
 .search-ajax {
     display: inline-block;
-    width: 200px;
 }
 
 .search-ajax input {
-    padding: 8px 8px;
+    padding: 0.6rem;
     width: 90%;
     border-radius: 4px;
     background-color: whitesmoke;
