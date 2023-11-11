@@ -96,6 +96,12 @@ nav a:hover {
     display: none;
 }
 
+.min-menu:hover {
+    background-color: rgba(212, 212, 218, 0.36);
+    border-radius: 9999px;
+}
+
+
 @media screen and (max-width: 768px) {
     .header-container {
         justify-content: space-between;
