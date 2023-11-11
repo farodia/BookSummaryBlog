@@ -123,6 +123,7 @@ nav a:hover {
     display: flex;
     -webkit-flex-direction: column;
     flex-direction: column;
+    flex-basis: 45rem;
 }
 
 .book-container {
@@ -222,8 +223,8 @@ nav a:hover {
     color: sandybrown;
 }
 
-.footer-background {
-    margin: 20% 0 0 0;
+footer {
+    margin: 2rem 0 0 0;
     background-color: #d4d4da;
 }
 

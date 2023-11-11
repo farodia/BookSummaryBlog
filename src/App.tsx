@@ -17,7 +17,7 @@ function App() {
                 <Route path="about" element={<About />} />
             </Routes>
 
-            <footer className="footer-background">
+            <footer>
                 <div className="footer-content">
                     <div className="footer-title">TO BE CONTINUED...</div>
                     <a href="https://github.com/farodia/WebApp" className="item">GitHub</a>
