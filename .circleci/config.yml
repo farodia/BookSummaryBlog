@@ -8,11 +8,20 @@ orbs:
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/configuration-reference/#workflows
+jobs:
+  build-and-test:
+    docker:
+      - image: cimg/node:21.1
+    steps:
+      - checkout
+      - node/install-packages:
+          pkg-manager: npm
+      - run:
+          name: Run tests
+          command: npm test 
 
 workflows:
   deploy:
     jobs:
-      - node: # this is the configuration elements provided by orbis
-          version: '21.1.0'
-          pkg-manager: yarn
+       - build-and-test
 
