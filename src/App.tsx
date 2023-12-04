@@ -14,6 +14,7 @@ function App() {
             <HeaderContainer />
             <Routes>
                <Route path="/" element={<BookSummary />} />
+               <Route path="/BookSummaryBlog" element={<BookSummary />} />
                 <Route path="about" element={<About />} />
             </Routes>
 
